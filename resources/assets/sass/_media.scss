@@ -1,0 +1,249 @@
+// Extra small devices (portrait phones, less than 544px)
+@media (max-width: 543px) { 
+	// TOOGGLES
+	.nav-opener{
+		opacity: 1 !important;
+		width: 250px !important;
+	}
+	.nav-opener-main-part{ 
+		transform:translateX(250px);
+	}
+	#mysidenav{
+		opacity: 0;
+		width: 0px ;
+	}
+	
+	#main-part{
+		transition: all 0.2s ease;
+		margin-left: 0px;
+	}
+	.sidenav{
+		width: 0px;
+	}
+
+	.user-greeting{
+		margin-top:20px !important; 
+	}
+		.third-line .col-xs-12:first-child{
+		height: 734px;
+	}
+	.navbar-inverse{
+		position:fixed;
+		z-index: 99;
+		margin-top: 20px;
+		img{
+			
+			margin-top: 16px;
+			margin-bottom: 18px;
+		
+		}
+		background-color: #22262E !important;
+		i{
+		color: white !important;
+		background-color:#1A1D23;
+		padding: 10px;
+	     }
+	     i:first-child{
+	     	margin-left: 5px;
+	     }
+
+	}
+	.col-xs-12{
+		padding-right:5px !important;
+		
+	}
+	.slider1{
+		height: 498px;
+		margin-bottom: 10px;
+	}
+	.slider1,.slider2,.slider3,.slider4{
+		height: 498px  !important;
+		padding-left:0px !important;
+		padding-right:0px !important;
+
+		div{
+			height: 498px !important;
+		}
+	}
+	.navbar-left{
+		position: absolute !important;
+	}
+	.navbar-right{
+		position:absolute;
+		right: 0px;
+		top: 0px;
+		margin-right:0px !important;
+	}
+	.sm-gutter{
+		padding-top: 85px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.container-fluid{
+		padding-left:0px !important;
+		padding-right:0px !important;
+	}
+	.weather-info{
+		padding-right:0px;
+		padding-left: 5px;
+	}
+ } 
+
+// Small devices (landscape phones, 544px and up)
+@media (min-width: 544px) and (max-width: 767px) { 
+
+	body #main-content .third-line .slider1{
+		margin-top: 10px !important;
+	}
+	.nav-opener{
+		opacity: 1 !important;
+		width: 250px !important;
+	}
+		.third-line .col-xs-12:first-child{
+		height: 734px;
+	}
+	
+	.nav-opener-main-part{
+
+		transform:translateX(250px);
+	}
+	#main-part{
+		margin-left: 0px ;
+	}
+	.sidenav{
+		width:0px ;
+	}
+	.col-xs-12{
+		padding-right:5px !important;
+		
+	}
+	.navbar-left{
+		position: absolute !important;
+	}
+	.slider1{
+		margin-bottom: 10px;
+	}
+	.slider1,.slider2,.slider3,.slider4{
+		height: 498px !important;
+		
+		padding-left:0px !important;
+		padding-right:0px !important;
+
+		div{
+			height: 498px !important;
+		}
+	}
+	.navbar-right{
+
+		position:absolute;
+		right: 0px;
+		top: 0px;
+		margin-right:0px !important;
+	}
+	.navbar-inverse{
+		position:fixed;
+		z-index: 99;
+		margin-top: 20px;
+		background-color: #22262E !important;
+		img{
+			margin-top: 16px;
+			margin-bottom: 18px;
+		}
+		i{
+		color: white !important;
+		background-color:#1A1D23;
+		padding: 10px;
+	     }
+	     i:first-child{
+	     	margin-left: 5px;
+	     }
+
+	}
+
+	.container-fluid{
+		padding-left:0px !important;
+		padding-right:0px !important;
+	}
+	.navbar-right{
+		padding-right:0px !important;
+	}
+	.sm-gutter{
+		padding-top: 85px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.user-greeting{
+		margin-top:20px !important; 
+	}
+	
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { 
+body #main-content .third-line .slider1,.slider2{
+		margin-top: 10px !important;
+	}
+	
+	.slider1 ,.slider3{
+		padding-left: 0px !important;
+	}
+	.fourth-line .col-md-6:first-child .pd-sm{
+		padding-bottom:30px !important;
+	}	
+	.slider1,.slider2,.slider3,.slider4{
+		height: 404px !important;
+		div{
+			height: 404px !important;
+		}
+	}
+	.third-line .col-xs-12:first-child{
+		height: 836px;
+	}
+	#main-part{
+		margin-left: 0px ;
+	}
+	.sidenav{
+		width:0px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { 
+ .slider1 div{
+ 	height: 237px ;
+ }
+ #main-part{
+		margin-left: 250px ;
+	}
+	.slider1,.slider2,.slider3,.slider4{
+		height: 237px ;
+		div{
+			height: 237px !important;
+		}
+	}
+	.sidenav{
+		width:250px;
+	}
+	.third-line .col-xs-12:first-child{
+		height: 477px;
+	}
+  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+     #main-part{
+		margin-left: 250px ;
+	}
+	.third-line .col-xs-12:first-child{
+		height: 487px;
+	}
+	.slider1,.slider2,.slider3,.slider4{
+		height: 237px ;
+		div{
+			height: 237px !important;
+		}
+	}
+	.sidenav{
+		width:250px;
+	}
+	 }
