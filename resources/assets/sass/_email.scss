@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+#main-content{
+	.content{
+		padding-top: 25px !important;
+	}
+	height:800px;
+	position: relative;
+	.mail-body{
+		font-family: 'Open Sans';
+		position:absolute;
+		height: 100%;
+		width: 95.5%;
+		padding: 1px 26px;
+		background-color: white;
+		color: #505458;
+		.mail-head{
+			h2{
+				font-weight: 300;
+				color: #505458;
+		 	}
+		 	.dropdown{
+		 		display: inline-block;
+		 		button{
+		 			padding: 1px 9px;
+		 		}
+		 	}
+		 	.mail-pages-info{
+		 		color: #6f7b8a;
+		 		margin-top: 30px;
+		 		margin-bottom: 13px;
+		 		font-size: 12px;
+		 		border-right: 1px solid #CECED7;
+		 		padding-right: 5px;
+		 	}
+		 	.mail-pages{
+		 		padding-left: 5px;
+		 		color: #6f7b8a;
+		 		margin-top: 23px;	
+		 	}
+		 	tbody{
+		 		td{
+		 			padding:10px 12px;
+		 			.star{
+		 				display: inline;
+		 				label:before {
+						    font-family: 'FontAwesome';
+						    content: "\F005";
+						    
+						    margin-right: 10px;
+						    position: absolute;
+						    left: 0px;
+						    top: -4px;
+						    font-size: 18px !important;
+						    color: #97a3b3;
+						    transition: border 0.2s linear 0s,color 0.2s linear 0s;
+						}
+		 			}
+		 		}
+		 	}
+
+		}
+	}
+}

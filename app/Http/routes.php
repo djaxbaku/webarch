@@ -11,14 +11,17 @@
 |
 */
 
-Route::get('/sendMessage', 'ChatController@sendMessage');
+
 
 Route::get('/', function () {
     return view('index');
 })->middleware('auth');
 
-
+Route::get('/email', function () {
+    return view('email');
+});
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
+//Route::post('/send', )

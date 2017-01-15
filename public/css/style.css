@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 .widthtoggle {
   width: 0px !important; }
 
@@ -522,6 +523,7 @@ body {
         position: absolute;
         bottom: 70px; }
         body .main-chat .chat-messages .chat-input textarea {
+          width: 100%;
           border-radius: 2px;
           padding: 6px 11px 6px 12px;
           width: 100%; }
@@ -1675,5 +1677,51 @@ body {
       height: 237px !important; }
   .sidenav {
     width: 250px; } }
+
+#main-content {
+  height: 800px;
+  position: relative; }
+  #main-content .content {
+    padding-top: 25px !important; }
+  #main-content .mail-body {
+    font-family: 'Open Sans';
+    position: absolute;
+    height: 100%;
+    width: 95.5%;
+    padding: 1px 26px;
+    background-color: white;
+    color: #505458; }
+    #main-content .mail-body .mail-head h2 {
+      font-weight: 300;
+      color: #505458; }
+    #main-content .mail-body .mail-head .dropdown {
+      display: inline-block; }
+      #main-content .mail-body .mail-head .dropdown button {
+        padding: 1px 9px; }
+    #main-content .mail-body .mail-head .mail-pages-info {
+      color: #6f7b8a;
+      margin-top: 30px;
+      margin-bottom: 13px;
+      font-size: 12px;
+      border-right: 1px solid #CECED7;
+      padding-right: 5px; }
+    #main-content .mail-body .mail-head .mail-pages {
+      padding-left: 5px;
+      color: #6f7b8a;
+      margin-top: 23px; }
+    #main-content .mail-body .mail-head tbody td {
+      padding: 10px 12px; }
+      #main-content .mail-body .mail-head tbody td .star {
+        display: inline; }
+        #main-content .mail-body .mail-head tbody td .star label:before {
+          font-family: 'FontAwesome';
+          content: "\F005";
+          margin-right: 10px;
+          position: absolute;
+          left: 0px;
+          top: -4px;
+          font-size: 18px !important;
+          color: #97a3b3;
+          transition: border 0.2s linear 0s,color 0.2s linear 0s; }
 
 /*# sourceMappingURL=style.css.map */
