@@ -27,7 +27,7 @@
      <div id="mySidenav" class="sidenav">
       <div class="nav-side-menu">
         <!-- BRAND, LOGO -->
-        <div class="brand hidden-xs"><img class="" src="assets/images/logo.png" alt=""><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i><span>2</span>
+        <div class="brand hidden-xs"><a href="index.php"><img class="" src="assets/images/logo.png" alt=""></a><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i><span>2</span>
         </div> 
         <!-- USER GREETING -->
         <div class="user-greeting">
@@ -409,18 +409,19 @@
                Showing <b>1 to 10</b> of <b>14</b> entries
             </div>  
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 mail-content">
           <table>
             <tbody>
               <tr>
                 <td >
-                  <div class="checkbox check-success">
-                    <input id="checkbox8" type="checkbox" value="1">
+                  <div >
+                    <input id="checkbox8" type="checkbox" style="" value="1">
                   </div>
                 </td>
                 <td>
                   <div class="star">
-                    <input id="checkbox9" type="checkbox" value="1" checked="">
+                    <input id="checkbox9"
+                    class="hidden" type="checkbox" value="1" checked="">
                     <label for="checkbox9" class=""></label>
                   </div>
                 </td>
