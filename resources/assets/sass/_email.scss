@@ -1,15 +1,98 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+.left-email-menu{
+	padding-top: 75px ;
+	background-color: #0aa699;
+	width:50px;
+	height: 100%;
+	li{
+		line-height: 53px !important;
+	height:100%;
+		a{
+			padding: 16px 13px 16px 7px;
+			color:white !important;
+			i{
+				font-size: 17px;
+			}
+		}
+		a:hover{
+			background-color: #0b9c8f;
+
+		}
+		padding: 0px !important;
+	}
+}
+.right-email-menu{
+	font-family: 'Open Sans';
+	padding-top: 80px;
+	.compose{
+		a{
+			color:white;
+			background-color: #0aa699;
+			padding: 9px 40px;
+			font-size: 14px;
+		  transition: all 0.12s linear 0s!important;
+			font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+			border-radius: 3px;
+			span{
+				font-weight: bold;
+			}
+		}
+		a:hover{
+			background-color: #099a8c;
+			text-decoration: none;
+		}
+	}
+	.email-menu-content{
+		margin-top: 50px;
+		span{
+			position: relative;
+			color: white;
+			font-size: 12px;
+			background-color: #F35958;
+			padding: 2px 7px;
+			border-radius: 50%;
+			font-weight: bold;
+		}
+		.gray{
+			background-color: #2A2E36;
+			color:#8b91a0;
+		}
+			h6{
+				padding-left: 81px;
+				padding-top: 25px;
+			}
+			ul:nth-child(2){
+				li{
+						font-size: 18px;
+						font-weight: 400;
+						font-family: 'Open Sans';
+				}
+				li:hover{
+					background-color: #22262e;
+				}
+			}
+			ul:nth-child(4){
+				font-style: 14px;
+				color:#8b91a0;
+				font-family: 'Open Sans';
+				font-weight: 400;
+				li:hover{
+					background-color: #22262e;
+				}
+			}
+	}
+}
 #main-content{
 	.content{
 		padding-top: 25px !important;
 	}
-	height:700px;
+//	height:700px;
 	position: relative;
 	.mail-body{
 		font-family: 'Open Sans';
-		position:absolute;
+		position:relative;;
 		height: 100%;
-		width: 95.5%;
+		width: 100%;
 		padding: 1px 26px;
 		background-color: white;
 		color: #505458;
@@ -17,11 +100,9 @@
 			padding-left: 0px;
 			padding-right:0px;
 			color:#95989a;
-			
+
 			tbody{
-					td:hover{
-				background-color:#f5f5f5 ;
-			}
+
 					td:first-child{
 						border-radius:4px;
 					}
@@ -31,12 +112,20 @@
 					}
 					td:nth-child(3){
 						color: black;
-						
+
 					}
+						td:nth-child(4){
+						width: 100%;
+
+						}
 					tr:nth-child(odd){
-						background-color: #ecf0f2;
+						background-color: #f9f9f9;
 					}
-			 		td{	width:100%;
+					tr:hover{
+				 background-color:#f5f5f5 ;
+				cursor:pointer;
+			}
+			 		td{
 					    overflow: hidden;
 					    text-overflow: ellipsis;
 					    white-space: nowrap;
@@ -44,16 +133,16 @@
 			 			padding:10px 12px 30px 12px !important;
 			 			.star{
 			 				display: inline;
+							label{
+								margin-bottom: 16px;
+							}
 			 				label:before {
 			 					cursor: pointer;
 							    font-family: 'FontAwesome';
 							    content: "\F005";
 							    position:absolute;
-							    left: 50px;
-							    top: 10px;
-							    margin-right: 10px;
-							    position: absolute;
-							    
+									left: 40px;
+
 							    font-size: 18px !important;
 							    color: #97a3b3;
 							    transition: border 0.2s linear 0s,color 0.2s linear 0s;
@@ -65,7 +154,7 @@
 			 		}
 
 			 	}
-		}	 	
+		}
 		.mail-head{
 			h2{ margin-bottom: 30px;
 				font-weight: 300;
@@ -86,11 +175,14 @@
 		 		padding-right: 5px;
 		 	}
 		 	.mail-pages{
+				.list-inline{
+					margin-top:5px;
+				}
 		 		padding-left: 5px;
 		 		color: #6f7b8a;
-		 		margin-top: 23px;	
+		 		margin-top: 23px;
 		 	}
-		 	
+
 
 		}
 	}

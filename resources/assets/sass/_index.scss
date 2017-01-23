@@ -22,17 +22,18 @@
 .margin-left-toggle{
 
   transition: margin 0.2s ease-in;
-  margin-left: -260px !important; 
+  margin-left: -260px !important;
 }
 .z-index-toggle{
   z-index: 0 !important;
 }
 .offline{
-  color: #F8575B !important; 
+  color: #F8575B !important;
 }
 body{
   width: 100%;
   font-family: 'Lato' !important;
+  height: 100%;
 
   //LEFT MENU
   .left-menu{
@@ -42,14 +43,14 @@ body{
 
     .sidenav {
       height: 100%;
-      
+
       position: fixed;
       z-index: 1;
       top: 0;
       left: 0;
       background-color: #111;
       overflow-x: hidden;
-      
+
     }
 
     .nav-side-menu {
@@ -68,7 +69,7 @@ body{
   width:250px;
   position:absolute;
   transition: margin 0.2s ease-in;
-  
+
   span{
     left: 99px;
     top:-3px;
@@ -94,9 +95,9 @@ body{
     margin-bottom: 2px;
 
   }
-  
+
   background-color: #22262E;
-  padding: 12px 14px;
+  padding: 14px 14px;
   display: inline-block;
   font-size: 14px;
 
@@ -179,7 +180,7 @@ h6{
       font-size: 11px;
       padding-left: 6px;
       padding-right: 6px;
-      border-radius: 10px; 
+      border-radius: 10px;
       background-color: #2A2E36;
       margin-bottom: 0px;
       line-height: 18px;
@@ -264,7 +265,7 @@ h6{
   }
 
 // FOOTER MENU PROGRESSBAR
-.menu-footer { 
+.menu-footer {
   position:absolute;
   bottom:0px;
   width: 250px;
@@ -273,7 +274,7 @@ h6{
   background-color: #22262E;
   .footer-menu-progressbar{
     background-color: #0aa699 ;
-    margin: 25px; 
+    margin: 25px;
     width: 70%;
     height: 4px;
     span{
@@ -312,19 +313,19 @@ h6{
   .navbar-inverse{
     transition: width 0.2s ease;
     border-radius:0px !important;
-    
+
     background-color: white;
     border: none;
-    
+
     width: 100%;
- 
+
     .input-group-btn{
       width: 40px !important;
     }
     // colors of icons
    li a{
     color: #505458 !important;
-    font-size: 18.5px ;   
+    font-size: 18.5px ;
   }
   .navbar-form{
     margin-top: 14px;
@@ -352,7 +353,7 @@ h6{
   margin-right: 6px;
  li:first-child{
 
-  a{  
+  a{
    font-size:16px;
    padding-top:10px ;
    span:first-child{
@@ -361,7 +362,7 @@ h6{
      background-color: #F35958;
      padding:2px 6px;
      border-radius:50%;
-   }  
+   }
    span{font-weight: bold ;
      color: black;}
      .fa-angle-down{
@@ -371,7 +372,7 @@ h6{
  }
 }
 }
-  //NOTIFICATIONS 
+  //NOTIFICATIONS
   .notifications{
     z-index: -2;
     background-color: #fff;
@@ -394,7 +395,7 @@ h6{
       font-weight: bold;
       font-size: 14px;
       font-family: 'Open Sans', sans-serif;
-      
+
     }
     .row{
       width: 100%;
@@ -453,7 +454,7 @@ h6{
   .userarrow{
     border-bottom: 10px solid black;
     border-left:10px solid transparent;
-    border-right: 10px solid transparent; 
+    border-right: 10px solid transparent;
     position:absolute;
     left: 150px;
     top:-10px;
@@ -478,7 +479,7 @@ h6{
         li{
           list-style-type: none;
           width: 100%;
-         
+
         text-decoration: none;
           a{width:160px;
             margin-top: 2px;
@@ -514,14 +515,14 @@ h6{
     .userarrow{
     border-bottom: 10px solid black;
     border-left:10px solid transparent;
-    border-right: 10px solid transparent; 
+    border-right: 10px solid transparent;
     position:absolute;
     left: 128px;
     top:-10px;
     z-index: 2;
-  } 
   }
-  // MAIN CHAT 
+  }
+  // MAIN CHAT
   .main-chat{
     position:fixed;
     right:0px;
@@ -544,8 +545,8 @@ h6{
         height: 37px;
         padding-left: 10px;
         font-size: 13px;
-        border-radius: 5px; 
-      } 
+        border-radius: 5px;
+      }
       input:focus{
         border:none;
         background-color: white;
@@ -581,9 +582,9 @@ h6{
         }
       }
     }
-    
+
     .favourites{
-      
+
       .col-md-12{
         margin: 7px;
         padding: 9px;
@@ -623,10 +624,10 @@ h6{
     }
     .chat-messages{
       height: 100%;
-        padding-left: 5px; 
+        padding-left: 5px;
         padding-right:5px;
         display: none;
-      p{ 
+      p{
         font-family: 'Open Sans';
         padding: 6px;
         padding-left: 21px;
@@ -705,10 +706,15 @@ h6{
       }
 
     }
-    
+
   }
   #main-content{
-    
+    .content{
+      height: 100%;
+      position: relative;
+    }
+    height: 100%;
+    position: relative;
     margin-top: -20px;
     transition: margin 0.2s linear;
     z-index: 0;
@@ -722,7 +728,7 @@ h6{
       margin-bottom: 10px;
       padding-left:5px;
       padding-right:5px;
-      
+
     }
     .titles{
      padding:  19px 18px 15px 24px;
@@ -852,7 +858,7 @@ h6{
 
   }
 }
-}  
+}
 .sales-graph{
   .sales-graph-title{
     padding-top: 30px;
@@ -867,14 +873,14 @@ h6{
       }
       span{
 
-        color: black; 
+        color: black;
         font-size:18px;
       }
 
     }
     padding-right:5px;
     background-color: white;
-    
+
 
     .col-md-12{
 
@@ -927,7 +933,7 @@ h6{
             transform: scale(1.1,1.1);
           }
           .col-md-6{
-            
+
             padding-left: 15px !important;
             color: white;
             padding:20px;
@@ -956,7 +962,7 @@ h6{
               padding:3px;
               border-radius:15px;
               transition: all 0.1s linear;
-            } 
+            }
             a:hover{
               background-color: white;
               color: black;
@@ -983,7 +989,7 @@ h6{
 
               }
             }
-          
+
           }
 
       }
@@ -999,11 +1005,11 @@ h6{
         div{
           background-color:#0090D9;
          }
-        h4{ 
+        h4{
           margin-top: 0px;
           font-family: arial;
           line-height: 2 !important;
-         
+
         }
         .slide1{
           position:relative;
@@ -1013,8 +1019,8 @@ h6{
             img{
               margin-right: 10px;
             }
-            
-            
+
+
           }
 
         }
@@ -1030,12 +1036,12 @@ h6{
             bottom:10px;
             }
           }
-        
+
       }
      .line{
 
       .col-md-3{
-          
+
          margin-top: 10px;
       div  {
         background-color: #0AA699;
@@ -1046,7 +1052,7 @@ h6{
 
       }
       .col-md-3:nth-child(2){
-        
+
         padding:0px;
         div{
           background-image:url("../images/11.png");
@@ -1057,10 +1063,10 @@ h6{
 
       }
      }
-     
+
       .col-md-3{
 
-        padding-left: 10px; 
+        padding-left: 10px;
         padding-right:10px;
         height: 237px;
         color: white;
@@ -1068,12 +1074,12 @@ h6{
         div{
 
           padding-bottom: 50px;
-         
+
           padding:15px;
           background-color: #BCBCBC;
         }
       }
-      
+
     }
 }
 // FOURTH LINE
@@ -1085,7 +1091,7 @@ h6{
           padding-left: 5px;
           padding-right:0px;
           .col-md-7{
-            
+
             padding-bottom:10px;
             background-color: white;
             text-align: center;
@@ -1114,7 +1120,7 @@ h6{
               margin-bottom: 15px;
             }
             p:nth-child(5){
-              
+
               span{
 
                 font-size:10.5px;
@@ -1123,7 +1129,7 @@ h6{
                 span{
                   font-size: 14px;
                   color:#505458;
-                } 
+                }
               }
             }
             .col-md-12{
@@ -1177,7 +1183,7 @@ h6{
                 padding-top: 15px;
                 color: white;
                 background-color: #F35958;
-                
+
                 h6{
                   font-weight: 700;
                   font-family: 'Open Sans';
@@ -1190,7 +1196,7 @@ h6{
                 p:first-child{
                   color:#F35958;
                   padding-top: 0px;
-                 font-size: 34px; 
+                 font-size: 34px;
                  padding-bottom: 0px;
                  border-bottom: none;
                  margin-bottom: 0px;
@@ -1210,14 +1216,14 @@ h6{
                     margin-top: 3px;
                     padding-bottom:5px;
               span{
-      
+
                 font-size:10.5px;
                 font-weight: 600;
                 color:#8b91a0;
                 span{
                   font-size: 14px;
                   color:#505458;
-                } 
+                }
               }
                 }
               }
@@ -1226,7 +1232,7 @@ h6{
               padding-right:0px;
                 .col-md-7{
                   padding-top:4px;
-                   p{ 
+                   p{
                     padding:0px;
                     margin: 0px;
                     font-size: 54px;
@@ -1259,7 +1265,7 @@ h6{
                   }
                 }
             }
-          } 
+          }
           // TOTAL INCOME
           .total-income{
             padding-left: 15px !important;
@@ -1267,7 +1273,7 @@ h6{
             background-color: white;
             margin-top: 10px;
             .col-md-4{
-              
+
               font-size: 18px;
               color:#1b1e24;
               font-weight: 600;
@@ -1295,7 +1301,7 @@ h6{
                 border-radius:5px;
                 height: 35px;
                 padding-left: 5px;
-                
+
                 border:none;
               }
             }
@@ -1369,7 +1375,7 @@ h6{
               font-weight: 600;
               padding-left: 15px;
               padding-right:15px;
-               
+
             span{
               color: black;
             }
@@ -1383,11 +1389,11 @@ h6{
             .col-md-12:nth-child(2){
               padding-left: 15px;
               padding-right:15px;
-              padding-top: 10px; 
+              padding-top: 10px;
               border-top:1px solid #e5e9ec;
              p{ color: #0aa699;
               span{color:#0aa699;}
-              
+
              }
              p:nth-child(2){
               color: black;
@@ -1421,7 +1427,7 @@ h6{
               border-radius:3px;
              height: 35px;
              padding: 16px 11px!important;
-            
+
             font-size: 13px;
             font-weight: normal;
             margin: 10px 0px;
@@ -1434,7 +1440,7 @@ h6{
               p{ color:#E4E7EA;
                 font-size: 12px;
               span{color:#E4E7EA;}
-              
+
              }
              p:nth-child(2){
               font-size: 18px;
@@ -1449,7 +1455,7 @@ h6{
                 border-radius:3px;
                 background-color: #f35958;
                 font-size: 11px;
-                
+
               }
              }
             }
@@ -1545,7 +1551,7 @@ h6{
                   padding-left: 0px;
                   padding-right:0px;
                   .titles{
-                  background-color: #0AA699;  
+                  background-color: #0AA699;
                   padding: 19px 18px 15px 24px;
                     h3{
                       font-family: 'Open Sans';
@@ -1560,7 +1566,7 @@ h6{
                         font-weight: 600;
                       }
                     }
-                    p{ 
+                    p{
                       float: right;
                       color:white;
                       margin-bottom: 0px;
@@ -1569,7 +1575,7 @@ h6{
                       border:2px solid white;
                       padding:3px 8px;
                       font-weight: 600;
-                      border-radius:10px; 
+                      border-radius:10px;
                       transition:all 0.2s linear;
                     }
                     p:hover{
@@ -1654,7 +1660,7 @@ h6{
                       i{
                         color: #F35958 !important;
                       }
-                      
+
                     }
 
                   }
@@ -1682,14 +1688,14 @@ h6{
 
                   }
                 }
-            } 
+            }
             .col-md-4:nth-child(2){
                   .col-md-12:nth-child(2){
                     margin-top: 10px;
                   padding-left: 0px;
                   padding-right:0px;
                   .titles{
-                  background-color: #0AA699;  
+                  background-color: #0AA699;
                   padding: 19px 18px 15px 24px;
                     h3{
                       font-family: 'Open Sans';
@@ -1704,7 +1710,7 @@ h6{
                         font-weight: 600;
                       }
                     }
-                    p{ 
+                    p{
                       float: right;
                       color:white;
                       margin-bottom: 0px;
@@ -1713,7 +1719,7 @@ h6{
                       border:2px solid white;
                       padding:3px 8px;
                       font-weight: 600;
-                      border-radius:10px; 
+                      border-radius:10px;
                       transition:all 0.2s linear;
                     }
                     p:hover{
@@ -1761,19 +1767,19 @@ h6{
                       font-size: 13px !important;
                      }
                   }
-                
+
                 }
                 .col-md-12:hover{
 
                   .big{
                     filter: contrast(120%);
                     transform:  scale(1.1,1.1);
-                    
+
                   }
                 }
                 .col-md-12{
                   overflow:hidden;
-                  
+
                   .big{transition: all 0.2s linear;
                     height: 193px;
                       width: 100%;
@@ -1789,10 +1795,11 @@ h6{
                     z-index: 1;
                   }
                   .content{
-                    position:relative; 
+                    height: 100%;
+                    position:relative;
                     z-index: 2;
                     padding: 19px 0px 15px 0px;
-                    p{ 
+                    p{
                       margin-top: 100px;
                       float: right;
                       color:white;
@@ -1802,7 +1809,7 @@ h6{
                       border:2px solid white;
                       padding:3px 8px;
                       font-weight: 600;
-                      border-radius:10px; 
+                      border-radius:10px;
                       transition:all 0.2s linear;
                       margin-bottom: 25px;
                       margin-right: 20px;
@@ -1851,7 +1858,7 @@ h6{
                         margin-top: 10px;
                         border-radius: 15px !important;
                         color: #999999 !important;
-                        border-color:#CCCCCC !important; 
+                        border-color:#CCCCCC !important;
 
                       }
                       p:last-child{
@@ -1886,9 +1893,9 @@ h6{
                         margin-left: 10px;
                         margin-bottom: 10px;
                     }
-                    
+
                     img{
-                      
+
                       margin-right: 10px;
                     }
                     span{
@@ -1903,8 +1910,8 @@ h6{
                       font-weight: 600;
                       color: #71798a;
                     }
-                     i{ 
-                      
+                     i{
+
                      }
                     .comment{
 
@@ -1917,7 +1924,7 @@ h6{
                       i{
                         color: #F35958 !important;
                       }
-                      
+
                     }
                     p{
                       font-weight: normal;
@@ -1956,15 +1963,16 @@ h6{
                   background-color:white;
                   padding-bottom: 30px;
                   img{
-                    
+
                     position:absolute;
                     z-index: 1;
                   }
                   .content{
+                    height: 100%;
                     position:relative;
                     z-index: 2;
                     padding: 19px 18px 15px 24px;
-                    p{ 
+                    p{
                       background-color:transparent ;
                       margin-top: 100px;
                       float: right;
@@ -1975,7 +1983,7 @@ h6{
                       border:2px solid white;
                       padding:3px 8px;
                       font-weight: 600;
-                      border-radius:10px; 
+                      border-radius:10px;
                       transition:all 0.2s linear;
                     }
                     p:hover{
@@ -1988,7 +1996,7 @@ h6{
                       margin-top: 25px;
                       padding-left: -10px;
                       padding-right: 0px;
-                      
+
                       img{
                         position:absolute;
                         margin-top: -30px;
@@ -2011,7 +2019,7 @@ h6{
                         margin-top: 10px;
                         border-radius: 15px !important;
                         color: #999999 !important;
-                        border-color:#CCCCCC !important; 
+                        border-color:#CCCCCC !important;
 
                       }
                       p:last-child{
@@ -2025,15 +2033,16 @@ h6{
                     }
                   }
                 }
-            }  
+            }
           }
       }
 
     #main-part{
-      transition: all 0.2s ease;    
+      height: 100%;
+      transition: all 0.2s ease;
       margin-right: 0px;
       position:relative !important;
-      
+
     }
 
 }

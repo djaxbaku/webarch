@@ -10,181 +10,66 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
-    <script src="/vendor/rickshaw-master/vendor/d3.min.js"></script> 
-    <script src="/vendor/rickshaw-master/vendor/d3.layout.min.js"></script> 
+    <script src="/vendor/rickshaw-master/vendor/d3.min.js"></script>
+    <script src="/vendor/rickshaw-master/vendor/d3.layout.min.js"></script>
     <script src="/vendor/js/main.js"></script>
-    <script src="/vendor/rickshaw-master/rickshaw.min.js"></script> 
+    <script src="/vendor/rickshaw-master/rickshaw.min.js"></script>
     <script src="/vendor/js/jquery.sparkline.min.js"></script>
     <link rel="stylesheet" href="/vendor/fonts/line-icons.woff">
     <link rel="stylesheet" href="/vendor/css/font-awesome.css">
     <link rel="stylesheet" href="/vendor/css/font-lineicons.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body> 
-  
+  <body style="position:absolute">
+
     <!-- LEFT MENU -->
     <div class="left-menu">
      <div id="mySidenav" class="sidenav">
       <div class="nav-side-menu">
         <!-- BRAND, LOGO -->
-        <div class="brand hidden-xs"><a href="index.php"><img class="" src="assets/images/logo.png" alt=""></a><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i><span>2</span>
-        </div> 
-        <!-- USER GREETING -->
-        <div class="user-greeting">
-          <img src="{{Auth::user()->img}}" width="45px" height="45px" class="img-circle" alt="">
-          <p class="username">Welcome <br> {{Auth::user()->name}} {{Auth::user()->surname}}</p>
-          <p class="userstatus">Status <a href=""><i class="fa fa-circle-o" aria-hidden="true"></i> 
-            <span>Online</span></a>
-          </p>
+        <div class="brand hidden-xs"><a href="index.php"><img class="" src="assets/images/logo.png" alt=""></a>
+          <i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i>
+          <span>2</span>
         </div>
-        <h6>BROWSE <i class="fa fa-refresh pull-right" aria-hidden="true"></i></h6>
-        <div class="menu-list">
+          <div class="left-email-menu pull-left">
+            <ul>
+              <li><a href="#"><i class="fa fa-home" style="font-size:19px" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa fa-adjust" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-ui" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-form" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-portlets" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-thumb" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-map" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-chart" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="icon-custom-extra" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
 
-          <ul id="menu-content" class="menu-content collapse out">
+          <div class="right-email-menu">
+            <div class="compose text-center">
+              <a href="#"><span class="bold">COMPOSE</span></a>
+            </div>
+            <div class="email-menu-content">
+              <h6>FOLDER</h6>
+              <ul class="text-right">
+                <li><a href="#"><span>2</span> Inbox</a></li>
+                <li><a href="#">Sent</a></li>
+                <li><a href="#">Draft</a></li>
+                <li><a href="#">Trash</a></li>
+              </ul>
+              <h6>QUICK VIEW</h6>
+              <ul class="text-right">
+                <li><a href="#">Documents</a></li>
+                <li><a href="#"><span class="hotnews gray">203</span> Images</a></li>
+                <li><a href="#">Flagged</a></li>
+              </ul>
+            </div>
+          </div>
 
-
-            <li  data-toggle="collapse" data-target="#products" class="collapsed">
-              <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Dashboard <span class="arrow"></span></a>
-            </li>
-            <ul class="sub-menu collapse" id="products">
-              <li><a href="#">Dashboard v1</a></li>
-              <li><a href="#">Dashboard v2</a></li>
-            </li>
-          </ul>
-
-
-          <li>
-            <a href="#">
-              <i class="fa fa-th" aria-hidden="true"></i> Widgets <span class="hotwidgets pull-right"><p>HOT</p></span>
-            </a>
-          </li><li>
-          <a href="email" >
-            <i class="fa fa-envelope fa-md"></i> Email  <span class="hotnews pull-right"><p>203</p></span>
-          </a>
-        </li>
-
-        <li data-toggle="collapse" data-target="#service" class="collapsed">
-          <a href="#"><i class="fa fa-adjust" aria-hidden="true"></i> Themes <span class="arrow"></span></a>
-        </li>  
-        <ul class="sub-menu collapse" id="service">
-          <li><a href="">New Service 1</a></li>
-          <li>New Service 2</li>
-          <li>New Service 3</li>
-        </ul>
-
-
-        <li data-toggle="collapse" data-target="#new" class="collapsed">
-          <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Layouts <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="new">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
-        <li data-toggle="collapse" data-target="#elements" class="collapsed">
-          <a href="#"><i class="fa fa-magnet" aria-hidden="true"></i> UI Elements <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="elements">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
-        <li data-toggle="collapse" data-target="#forms" class="collapsed">
-          <a href="#"><i class="fa fa-align-right" aria-hidden="true"></i> Forms <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="forms">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
-
-        <li data-toggle="collapse" data-target="#grids" class="collapsed">
-          <a href="#"><i class="fa fa-pencil-square" aria-hidden="true"></i> Grids <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="grids">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
-        <li data-toggle="collapse" data-target="#tables" class="collapsed">
-          <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i> Tables <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="tables">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
-
-        <li data-toggle="collapse" data-target="#maps" class="collapsed">
-          <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Maps <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="maps">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>    
-
-        <li>
-          <a href="#">
-            <i class="fa fa-line-chart" aria-hidden="true"></i>
-            Charts
-          </a>
-        </li>
-        <li data-toggle="collapse" data-target="#extra" class="collapsed">
-          <a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
-           Extra <span class="arrow"></span></a>
-         </li>
-         <ul class="sub-menu collapse" id="extra">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>  
-
-        <li data-toggle="collapse" data-target="#menulevels" class="collapsed">
-          <a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i> Menu Levels <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="menulevels">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>  
-        <h6>FOLDER <i class="fa pull-right fa-plus" aria-hidden="true"></i></h6>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o" style=" color: #00A69A;" aria-hidden="true"></i> My quick tasks
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o" style="color: #F35958;" aria-hidden="true"></i> To do list
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o" style="color: #0092D3;" aria-hidden="true"></i> Projects
-          </a>
-        </li>
-        <h6>PROJECTS <i class="fa pull-right fa-plus" style="" aria-hidden="true"></i></h6>
-        <li>
-          <a href="#">
-            Freelancer <i class="fa fa-times pull-right" style="margin-top: 10px;" aria-hidden="true"></i>
-            <br>  <span class="project">Redesign home page</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-           envato <i class="fa fa-times pull-right" style="margin-top: 10px;" aria-hidden="true"></i><br> <span class="project">Statistical report</span>
-         </a>
-       </li>
-     </ul>
-
-   </div>
-   <div class="menu-footer">
-    <div class="progress-bar footer-menu-progressbar" role="progressbar" aria-valuenow="76"
-    aria-valuemin="0" aria-valuemax="100" style="width:50%;">
-    <span>86%</span><a href=""><i class="fa fa-power-off fa-lg" aria-hidden="true"></i></a>
-
-  </div>
 </div>
 </div>
 </div>
@@ -285,15 +170,15 @@
     </div>
   </div>
    <div class="chat-input col-md-12">
-   
+
    {{ csrf_field() }}
    <input type="hidden" >
     <textarea rows="1" placeholder="Type your message" class="text"></textarea>
-    
+
   </div>
   </div>
- 
- 
+
+
 </div>
 
 <div id="main-part">
@@ -307,7 +192,7 @@
      <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-repeat" aria-hidden="true"></i></a>
      </li>
      <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-th-large" aria-hidden="true"></i></a>
-     </li> 
+     </li>
 
    </ul>
    <div class="" style="display: flex;
@@ -315,10 +200,10 @@
   justify-content: center;">
      <img class="text-center visible-xs " src="assets/images/logo.png" alt="">
    </div>
-   
+
    <div class=" hidden-xs pull-left">
      <form class="navbar-form" role="search">
-       <div class="input-group col-md-8">
+       <div class="input-group col-md-8 col-lg-12">
         <div class="input-group-btn">
          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
        </div>
@@ -335,9 +220,9 @@
    </a>
  </li>
  <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-cog1 fa-cog" aria-hidden="true"></i></a>
- </li> 
+ </li>
  <li class="chat-open pull-right"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
- </li> 
+ </li>
 </ul>
 </div>
 </div>
@@ -354,18 +239,18 @@
       <img src="assets/images/d.jpg" class="img-circle pull-left" alt="">
       <p class="heading ">David Nester - Commented...</p>
       <p class="description">Meeting postponed to tomorrow</p>
-      <p class="time">A min ago</p>   
+      <p class="time">A min ago</p>
     </div>
     <div class="col-md-12 notification-messages danger">
      <p class="heading">Server load limited</p>
      <p class="description">Database server has reached its d...</p>
-     <p class="time">2 mins ago</p>   
+     <p class="time">2 mins ago</p>
    </div>
    <div class="col-md-12 notification-messages">
     <img src="assets/images/h.jpg" class="img-circle pull-left" alt="">
     <p class="heading">You haveve got 150 messa...</p>
     <p class="description">150 newly unread messages in you...</p>
-    <p class="time">An hour ago</p>   
+    <p class="time">An hour ago</p>
   </div>
 </div>
 </div>
@@ -398,16 +283,16 @@
             </div>
             <div class="pull-right mail-pages">
                <ul class="list-inline">
-                 <li><i class="fa fa-2x fa-angle-left" aria-hidden="true"></i>
+                 <li><i class="fa fa-chevron-left" aria-hidden="true"></i>
                  </li>
                  <li class="active">1</li>
                  <li>2</li>
-                 <li><i class="fa fa-2x fa-angle-right" aria-hidden="true"></i></li>
+                 <li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
                </ul>
-            </div>  
+            </div>
             <div class="pull-right mail-pages-info">
                Showing <b>1 to 10</b> of <b>14</b> entries
-            </div>  
+            </div>
           </div>
           <div class="col-md-12 mail-content">
           <table>
@@ -429,9 +314,94 @@
                 <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
                 <td class="clickable"><span class="muted">Yesterday </span></td>
               </tr>
+              <tr>
+                <td >
+                  <div >
+                    <input id="checkbox8" type="checkbox" style="" value="1">
+                  </div>
+                </td>
+                <td>
+                  <div class="star">
+                    <input id="checkbox11"
+                    class="hidden" type="checkbox" value="2" >
+                    <label for="checkbox11" class=""></label>
+                  </div>
+                </td>
+                <td class="clickable v-align-middle">Jane Smith</td>
+                <td class="clickable tablefull v-align-middle"><span class="muted">Open the door to success, maximum revanue efficient, and useful</span></td>
+                <td class="clickable"><span class="muted">Yesterday </span></td>
+              </tr>
+              <tr>
+                <td >
+                  <div >
+                    <input id="checkbox8" type="checkbox" style="" value="1">
+                  </div>
+                </td>
+                <td>
+                  <div class="star">
+                    <input id="checkbox10"
+                    class="hidden" type="checkbox" value="2">
+                    <label for="checkbox10" class=""></label>
+                  </div>
+                </td>
+                <td class="clickable v-align-middle">David Nester</td>
+                <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
+                <td class="clickable"><span class="muted">Yesterday </span></td>
+              </tr>
+              <td >
+                <div >
+                  <input id="checkbox8" type="checkbox" style="" value="1">
+                </div>
+              </td>
+              <td>
+                <div class="star">
+                  <input id="checkbox10"
+                  class="hidden" type="checkbox" value="2">
+                  <label for="checkbox10" class=""></label>
+                </div>
+              </td>
+              <td class="clickable v-align-middle">David Nester</td>
+              <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
+              <td class="clickable"><span class="muted">Yesterday </span></td>
+            </tr>
+            <td >
+              <div >
+                <input id="checkbox8" type="checkbox" style="" value="1">
+              </div>
+            </td>
+            <td>
+              <div class="star">
+                <input id="checkbox10"
+                class="hidden" type="checkbox" value="2">
+                <label for="checkbox10" class=""></label>
+              </div>
+            </td>
+            <td class="clickable v-align-middle">David Nester</td>
+            <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
+            <td class="clickable"><span class="muted">Yesterday </span></td>
+          </tr>
+          <td >
+            <div >
+              <input id="checkbox8" type="checkbox" style="" value="1">
+            </div>
+          </td>
+          <td>
+            <div class="star">
+              <input id="checkbox10"
+              class="hidden" type="checkbox" value="2">
+              <label for="checkbox10" class=""></label>
+            </div>
+          </td>
+          <td class="clickable v-align-middle">David Nester</td>
+          <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
+          <td class="clickable"><span class="muted">Yesterday </span></td>
+        </tr>
             </tbody>
           </table>
           </div>
   		  </div>
 	 </div>
+</div>
+<div class="clearfix">
+
 </div>
