@@ -2,7 +2,7 @@
   $( document ).ready(function() {
 
     $(".fa-bars").click(function () {
-      
+
       if ( 767 > $(window).width()  ) {
         $("#mySidenav").toggleClass("nav-opener");
         $("#main-part").toggleClass("nav-opener-main-part");
@@ -31,13 +31,13 @@
       $(".settings").removeClass("displaytoggle");
     });
     $(".chat-open").click(function () {
-      
+
       $(".settings").toggleClass("margin-right-toggle");
       if ( 767 > $(window).width()  ) {
         $("#main-part").toggleClass("right-toggle");
       $("#mySidenav").toggleClass('margin-left-toggle');
       $(".main-chat").toggleClass('z-index-toggle');
-      
+
       }
       else{
         $("#main-part").toggleClass("margin-right-toggle");
@@ -46,7 +46,7 @@
       $(".notifications").toggleClass("margin-right-toggle");
       }
     });
-    
+
     $(window).resize(function() {
      if (768 < $(window).width() && 991 > $(window).width()  ) {
       $("#mySidenav").addClass("widthtoggle");
@@ -96,7 +96,7 @@
       spotRadius: 0});
     }
     setInterval(stats, 1000);
-   
+
     $("#sparkline2").sparkline([9,8,7,9,9,8,9,8,8,9,7,8,8,9,9,8,7,8,8,8,7,9,9,1,8,7], {
       type: 'line',
       lineColor: '#',
@@ -127,9 +127,14 @@
       spotColor: 'white',
       spotRadius: 2.5});
 
+      $('.compose').click(function() {
+        $('.mail-body').toggle();
+        $('.mail-compose').toggle();
+      });
+
      setInterval(function(){
         $.slider_height= $('.slider1').height();
-        
+
         $('.slider1 ul').animate({
           marginTop: "-"+$.slider_height+"px"
           },
@@ -142,7 +147,7 @@
       } , 2000);;
       setInterval(function(){
         $.slider_height= $('.slider2').height();
-        
+
         $('.slider2 ul').animate({
           marginTop: "-"+$.slider_height+"px"
           },
@@ -183,11 +188,11 @@
 
 });
 
-  
+
   var graph = new Rickshaw.Graph({
     renderer: 'bar',
     element: document.querySelector('#chart'),
-    series: [ 
+    series: [
     {
       data: [ { x: 0, y: 4 }, { x: 1, y: 0 }, { x: 2, y: 38 }, { x: 3, y: 30 }, { x: 4, y: 32 }, { x: 5, y: 16 }, { x: 6, y: 16 }, { x: 7, y: 16 }, { x: 8, y: 12 }, { x: 9, y: 12 }, { x: 10, y: 16 }, { x: 11, y: 16 }, { x: 12, y: 19 }, { x: 13, y: 15 }, { x: 14, y: 34 }, { x: 15, y: 16 }, { x: 16, y: 16 }, { x: 17, y: 23 } ],
       color: 'rgb(39, 206, 188)'
@@ -205,13 +210,13 @@
 
   });
 
-  graph.render();    
+  graph.render();
 
  var graph = new Rickshaw.Graph({
   renderer: 'area',
   element: document.querySelector('#chart1'),
   stroke: true,
-  series: [ 
+  series: [
   {
     data: [ { x: 0, y: 9 }, { x: 1, y: 25 }, { x: 2, y: 38 }, { x: 3, y: 30 }, { x: 4, y: 32 }, { x: 5, y: 16 }, { x: 6, y: 16 }, { x: 7, y: 16 }, { x: 8, y: 12 }, { x: 9, y: 12 }, { x: 10, y: 16 }, { x: 11, y: 16 }, { x: 12, y: 19 }, { x: 13, y: 15 }, { x: 14, y: 34 }, { x: 15, y: 16 }, { x: 16, y: 16 }, { x: 17, y: 23 } ],
     color: 'rgb(39, 206, 188)'
@@ -224,12 +229,12 @@
 
 });
 
- graph.render();   
+ graph.render();
  var graph = new Rickshaw.Graph({
   renderer: 'line',
   element: document.querySelector('#chart3'),
   stroke: true,
-  series: [ 
+  series: [
   {
     data: [ { x: 0, y: 11 }, { x: 1, y: 25 }, { x: 2, y: 27 }, { x: 3, y: 30 }, { x: 4, y: 32 }, { x: 5, y: 16 }, { x: 6, y: 26 }, { x: 7, y: 16 }, { x: 8, y: 12 }, { x: 9, y: 12 }, { x: 10, y: 16 }, { x: 11, y: 16 }, { x: 12, y: 19 }, { x: 13, y: 21 }, { x: 14, y: 34 }, { x: 15, y: 16 }, { x: 16, y: 16 }, { x: 17, y: 23 } ],
     color: '#E0E3E5'
@@ -242,5 +247,4 @@
 
 });
 
- graph.render();   
- 
+ graph.render();

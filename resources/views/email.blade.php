@@ -298,7 +298,7 @@
           <table>
             <tbody>
               <tr>
-                <td >
+                <td>
                   <div >
                     <input id="checkbox8" type="checkbox" style="" value="1">
                   </div>
@@ -380,8 +380,8 @@
             <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
             <td class="clickable"><span class="muted">Yesterday </span></td>
           </tr>
-          <td >
-            <div >
+          <td>
+            <div>
               <input id="checkbox8" type="checkbox" style="" value="1">
             </div>
           </td>
@@ -395,11 +395,14 @@
           <td class="clickable v-align-middle">David Nester</td>
           <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
           <td class="clickable"><span class="muted">Yesterday </span></td>
-        </tr>
+          </tr>
             </tbody>
           </table>
           </div>
   		  </div>
+        <div class="mail-compose">
+          <h2>New Message</h2>
+        </div>
 	 </div>
 </div>
 <div class="clearfix">

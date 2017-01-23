@@ -1823,4 +1823,9 @@ body {
       #main-content .mail-body .mail-head .mail-pages .list-inline {
         margin-top: 5px; }
 
+.mail-compose {
+  padding: 1px 26px;
+  display: none;
+  background-color: white; }
+
 /*# sourceMappingURL=style.css.map */
