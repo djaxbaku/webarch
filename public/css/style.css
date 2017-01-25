@@ -1742,12 +1742,14 @@ body {
       font-family: 'Open Sans'; }
     .right-email-menu .email-menu-content ul:nth-child(2) li:hover {
       background-color: #22262e; }
-    .right-email-menu .email-menu-content ul:nth-child(4) {
+    .right-email-menu .email-menu-content ul:nth-child(3) {
+      font-weight: 400; }
+    .right-email-menu .email-menu-content ul:nth-child(5) {
       font-style: 14px;
       color: #8b91a0;
       font-family: 'Open Sans';
       font-weight: 400; }
-      .right-email-menu .email-menu-content ul:nth-child(4) li:hover {
+      .right-email-menu .email-menu-content ul:nth-child(5) li:hover {
         background-color: #22262e; }
 
 #main-content {
@@ -1827,5 +1829,56 @@ body {
   padding: 1px 26px;
   display: none;
   background-color: white; }
+  .mail-compose h2 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color: #505458;
+    font-size: 30px; }
+  .mail-compose .form-label {
+    color: #55606e;
+    margin-right: 8px; }
+  .mail-compose .help {
+    color: #A7ABB1;
+    font-size: 12px;
+    font-family: 'Open Sans'; }
+  .mail-compose input, .mail-compose textarea {
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: #e5e9ec;
+    transition: all 0.2s linear 0s,box-shadow 0.2s linear 0s; }
+  .mail-compose input:focus, .mail-compose textarea:focus {
+    border-color: #f1f1f1;
+    background-color: #f4f5f7;
+    box-shadow: none; }
+  .mail-compose .send {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    margin-left: 250px;
+    width: 100%;
+    padding: 30px 40px;
+    padding-bottom: 70px;
+    padding-right: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.08); }
+    .mail-compose .send input {
+      color: white;
+      padding: 7px 45px;
+      padding-bottom: 9px;
+      background-color: #f35958;
+      font-size: 14px;
+      box-shadow: none;
+      border-radius: 3px;
+      border: none;
+      position: absolute;
+      right: 160px; }
+    .mail-compose .send button {
+      position: absolute;
+      right: 30px;
+      padding: 7px 45px;
+      background-color: white;
+      color: #5e5e5e;
+      border: 1px solid #e5e9ec; }
 
 /*# sourceMappingURL=style.css.map */

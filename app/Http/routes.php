@@ -24,4 +24,4 @@ Route::get('/email', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
-//Route::post('/send', )
+Route::post('/send', 'MessagesController@send');

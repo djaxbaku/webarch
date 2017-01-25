@@ -2,7 +2,7 @@
   <html>
   <head>
     <meta charset="utf-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Webarch</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
@@ -60,6 +60,10 @@
                 <li><a href="#">Sent</a></li>
                 <li><a href="#">Draft</a></li>
                 <li><a href="#">Trash</a></li>
+              </ul>
+              <ul class="text-right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#"><span>2</span> Work</a></li>
               </ul>
               <h6>QUICK VIEW</h6>
               <ul class="text-right">
@@ -401,7 +405,30 @@
           </div>
   		  </div>
         <div class="mail-compose">
-          <h2>New Message</h2>
+          <form action="send" method="POST">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <h2>New Message</h2>
+            <div class="form-group">
+              <label class="form-label">To</label>
+              <span class="help">e.g. "someone@example.com"</span>
+              <div class="controls">
+                <input type="text" name="getter_name" class="form-control ">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <span class="help">e.g. "Meeting Agenda"</span>
+              <div class="controls">
+                <input type="text" name="heading" class="form-control">
+              </div>
+            </div>
+            <textarea name="text" class="form-control" style="height:500px;"></textarea>
+            <div class="send">
+              <input type="submit" value="Send">
+              <button class="btn btn-white btn-cons btn-cancel" type="button"> Save
+              </button>
+            </div>
+          </form>
         </div>
 	 </div>
 </div>
