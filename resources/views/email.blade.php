@@ -274,7 +274,12 @@
   		  <div class="mail-body">
     		  <div class="mail-head">
             <div class="pull-left">
-              <h2>Inbox
+              <h2>Inbo
+                <pre>
+                @foreach($mail as $message)
+                {{print_r($message)}}
+                @endforeach
+                </pre>
                <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
               <span class="caret"></span></button>

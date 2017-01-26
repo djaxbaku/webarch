@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('index');
 })->middleware('auth');
 
-Route::get('/email', function () {
-    return view('email');
-});
+Route::get('/email', 'MessagesController@email');
+
 
 Route::auth();
 
