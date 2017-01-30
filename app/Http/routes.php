@@ -24,3 +24,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
 Route::post('/send', 'MessagesController@send');
+Route::get('/compose', 'MessagesController@compose');

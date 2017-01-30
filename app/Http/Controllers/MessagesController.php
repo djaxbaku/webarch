@@ -15,10 +15,16 @@ class MessagesController extends Controller
     	$message->heading= $request->heading;
     	$message->text= $request->text;
       $message->save();
-      return view('email');
-    }
-    public function email(){
       $mail= DB::table('messages')->get();
+
       return view('email', compact('mail'));
     }
+    public function email(){
+      $mail= Message::all();
+      return view('email', compact('mail'));
+    }
+  public function compose()
+  {
+  	return view('compose');
+  }
 }

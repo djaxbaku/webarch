@@ -1827,7 +1827,7 @@ body {
 
 .mail-compose {
   padding: 1px 26px;
-  display: none;
+  display: block;
   background-color: white; }
   .mail-compose h2 {
     font-family: 'Open Sans';

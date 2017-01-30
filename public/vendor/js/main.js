@@ -127,10 +127,7 @@
       spotColor: 'white',
       spotRadius: 2.5});
 
-      $('.compose').click(function() {
-        $('.mail-body').toggle();
-        $('.mail-compose').toggle();
-      });
+      
 
      setInterval(function(){
         $.slider_height= $('.slider1').height();
