@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #424A51;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .left-email-menu{
 	padding-top: 75px ;
 	background-color: #0aa699;
 	width:50px;
 	height: 100%;
-	li{ 
+	li{
 		line-height: 53px !important;
 	height:100%;
 		a{
@@ -164,26 +184,57 @@
 				color: #505458;
 		 	}
 		 	.dropdown{
+        margin-left: 10px;
+        margin-top:27px;
+
 		 		display: inline-block;
 		 		button{
+          border-color:#ccc !important;
 		 			padding: 1px 9px;
 		 		}
 		 	}
 		 	.mail-pages-info{
 		 		color: #6f7b8a;
 		 		margin-top: 30px;
+
+        }
 		 		margin-bottom: 13px;
 		 		font-size: 12px;
 		 		border-right: 1px solid #CECED7;
 		 		padding-right: 5px;
 		 	}
 		 	.mail-pages{
-				.list-inline{
-					margin-top:5px;
-				}
-		 		padding-left: 5px;
-		 		color: #6f7b8a;
-		 		margin-top: 23px;
+        .pagination{
+          margin:0px;
+          margin-top: 23px;
+          li{
+            a{
+              border:none !important;
+              color:#6F7B8A;
+            }
+            span{
+              color:#6F7B8A;
+              border:none !important;
+            }
+          }
+          .active{
+            span{
+              font-weight: 600;
+              color:#6F7B8A;
+              background-color: #F3F6F9 ;
+              padding: 5px 10px;
+              border-radius: 3px;
+              border:none;
+            }
+            li{
+              a{
+                border:none;
+                color:#6F7B8A   ;
+                padding: 5px 10px !important;
+              }
+            }
+          }
+
 		 	}
 
 
@@ -195,7 +246,7 @@
 	display:block;
 	background-color: white;
 	h2{
-	font-family: 'Open Sans';	
+	font-family: 'Open Sans';
 	font-weight: 300;
 	color: #505458;
 	font-size:30px;

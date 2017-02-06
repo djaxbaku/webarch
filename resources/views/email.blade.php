@@ -274,145 +274,57 @@
   		  <div class="mail-body">
     		  <div class="mail-head">
             <div class="pull-left">
-              <h2>Inbo
-                <pre>
-                @foreach($mail as $message)
-                @if ($message->getter_name=='alixalilzade@gmail.com')
-                  {{print_r($message)}}
-                @endif
-                
-                @endforeach
-                </pre>
-               <div class="dropdown">
+              <h2  class="pull-left">Inbox </h2>
+
+               <div class="dropdown pull-right">
               <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
               <span class="caret"></span></button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu ">
                 <li><a href="#">HTML</a></li>
                 <li><a href="#">CSS</a></li>
                 <li><a href="#">JavaScript</a></li>
               </ul>
             </div></h2>
             </div>
-            <div class="pull-right mail-pages">
-               <ul class="list-inline">
-                 <li><i class="fa fa-chevron-left" aria-hidden="true"></i>
-                 </li>
-                 <li class="active">1</li>
-                 <li>2</li>
-                 <li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-               </ul>
+
+            <div class="mail-pages pull-right">
+              {{$mail->links()}}
             </div>
             <div class="pull-right mail-pages-info">
                Showing <b>1 to 10</b> of <b>14</b> entries
             </div>
+
           </div>
           <div class="col-md-12 mail-content">
           <table>
             <tbody>
-              <tr>
-                <td>
-                  <div >
-                    <input id="checkbox8" type="checkbox" style="" value="1">
-                  </div>
-                </td>
-                <td>
-                  <div class="star">
-                    <input id="checkbox9"
-                    class="hidden" type="checkbox" value="1" checked="">
-                    <label for="checkbox9" class=""></label>
-                  </div>
-                </td>
-                <td class="clickable v-align-middle">David Nester</td>
-                <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
-                <td class="clickable"><span class="muted">Yesterday </span></td>
-              </tr>
-              <tr>
-                <td >
-                  <div >
-                    <input id="checkbox8" type="checkbox" style="" value="1">
-                  </div>
-                </td>
-                <td>
-                  <div class="star">
-                    <input id="checkbox11"
-                    class="hidden" type="checkbox" value="2" >
-                    <label for="checkbox11" class=""></label>
-                  </div>
-                </td>
-                <td class="clickable v-align-middle">Jane Smith</td>
-                <td class="clickable tablefull v-align-middle"><span class="muted">Open the door to success, maximum revanue efficient, and useful</span></td>
-                <td class="clickable"><span class="muted">Yesterday </span></td>
-              </tr>
-              <tr>
-                <td >
-                  <div >
-                    <input id="checkbox8" type="checkbox" style="" value="1">
-                  </div>
-                </td>
-                <td>
-                  <div class="star">
-                    <input id="checkbox10"
-                    class="hidden" type="checkbox" value="2">
-                    <label for="checkbox10" class=""></label>
-                  </div>
-                </td>
-                <td class="clickable v-align-middle">David Nester</td>
-                <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
-                <td class="clickable"><span class="muted">Yesterday </span></td>
-              </tr>
-              <td >
-                <div >
-                  <input id="checkbox8" type="checkbox" style="" value="1">
-                </div>
-              </td>
-              <td>
-                <div class="star">
-                  <input id="checkbox10"
-                  class="hidden" type="checkbox" value="2">
-                  <label for="checkbox10" class=""></label>
-                </div>
-              </td>
-              <td class="clickable v-align-middle">David Nester</td>
-              <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
-              <td class="clickable"><span class="muted">Yesterday </span></td>
-            </tr>
-            <td >
-              <div >
-                <input id="checkbox8" type="checkbox" style="" value="1">
-              </div>
-            </td>
-            <td>
-              <div class="star">
-                <input id="checkbox10"
-                class="hidden" type="checkbox" value="2">
-                <label for="checkbox10" class=""></label>
-              </div>
-            </td>
-            <td class="clickable v-align-middle">David Nester</td>
-            <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
-            <td class="clickable"><span class="muted">Yesterday </span></td>
-          </tr>
-          <td>
-            <div>
-              <input id="checkbox8" type="checkbox" style="" value="1">
-            </div>
-          </td>
-          <td>
-            <div class="star">
-              <input id="checkbox10"
-              class="hidden" type="checkbox" value="2">
-              <label for="checkbox10" class=""></label>
-            </div>
-          </td>
-          <td class="clickable v-align-middle">David Nester</td>
-          <td class="clickable tablefull v-align-middle"><span class="muted">Less spam, and mobile access. Gmail is email that's intuitive, ...efficient, and useful. And maybe even fun.</span></td>
-          <td class="clickable"><span class="muted">Yesterday </span></td>
-          </tr>
+              @foreach($mail as $message)
+
+                <tr>
+                  <td>
+                    <div >
+                      <input id="checkbox8" type="checkbox" style="" value="1">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="star">
+                      <input id="checkbox9"
+                      class="hidden" type="checkbox" value="1" >
+                      <label for="checkbox9" class=""></label>
+                    </div>
+                  </td>
+                  <td class="clickable v-align-middle">{{$message->sender_name}}</td>
+                  <td class="clickable tablefull v-align-middle"><span class="muted">{{$message->heading}}</span></td>
+                  <td class="clickable"><span class="muted">{{$message->created_at}}</span></td>
+                </tr>
+
+
+              @endforeach
             </tbody>
           </table>
           </div>
   		  </div>
-        
+
 	 </div>
 </div>
 <div class="clearfix">
