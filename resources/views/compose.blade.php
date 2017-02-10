@@ -271,7 +271,7 @@
 <!-- MAIN CONTENT -->
 <div id="main-content">
 	 <div class="content sm-gutter">
-  		  
+
         <div class="mail-compose">
           <form action="send" method="POST">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">

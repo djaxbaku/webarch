@@ -54,7 +54,7 @@
            border-color: #f1f1f1;
            background-color: #f4f5f7;
            border-size:1px;
-           box-shadow: none;  
+           box-shadow: none;
         }
         .checkbox1{
             font-size: 13px;

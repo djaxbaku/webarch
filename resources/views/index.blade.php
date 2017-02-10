@@ -9,9 +9,9 @@
     <script src="vendor/js/jq.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
-    <script src="/vendor/rickshaw-master/vendor/d3.min.js"></script> 
-    <script src="/vendor/rickshaw-master/vendor/d3.layout.min.js"></script> 
-    <script src="/vendor/rickshaw-master/rickshaw.min.js"></script> 
+    <script src="/vendor/rickshaw-master/vendor/d3.min.js"></script>
+    <script src="/vendor/rickshaw-master/vendor/d3.layout.min.js"></script>
+    <script src="/vendor/rickshaw-master/rickshaw.min.js"></script>
     <script src="/vendor/js/jquery.sparkline.min.js"></script>
     <script src="/vendor/js/main.js"></script>
     <link rel="stylesheet" href="/vendor/fonts/line-icons.woff">
@@ -19,20 +19,19 @@
     <link rel="stylesheet" href="/vendor/css/font-lineicons.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body> 
-  
+  <body>
     <!-- LEFT MENU -->
     <div class="left-menu">
      <div id="mySidenav" class="sidenav">
       <div class="nav-side-menu">
         <!-- BRAND, LOGO -->
         <div class="brand hidden-xs"><img class="" src="assets/images/logo.png" alt=""><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-home" aria-hidden="true"></i><span>2</span>
-        </div> 
+        </div>
         <!-- USER GREETING -->
         <div class="user-greeting">
           <img src="{{Auth::user()->img}}" width="45px" height="45px" class="img-circle" alt="">
           <p class="username">Welcome <br> {{Auth::user()->name}} {{Auth::user()->surname}}</p>
-          <p class="userstatus">Status <a href=""><i class="fa fa-circle-o" aria-hidden="true"></i> 
+          <p class="userstatus">Status <a href=""><i class="fa fa-circle-o" aria-hidden="true"></i>
             <span>Online</span></a>
           </p>
         </div>
@@ -64,7 +63,7 @@
 
         <li data-toggle="collapse" data-target="#service" class="collapsed">
           <a href="#"><i class="fa fa-adjust" aria-hidden="true"></i> Themes <span class="arrow"></span></a>
-        </li>  
+        </li>
         <ul class="sub-menu collapse" id="service">
           <li><a href="">New Service 1</a></li>
           <li>New Service 2</li>
@@ -121,7 +120,7 @@
           <li>New New 1</li>
           <li>New New 2</li>
           <li>New New 3</li>
-        </ul>    
+        </ul>
 
         <li>
           <a href="#">
@@ -137,7 +136,7 @@
           <li>New New 1</li>
           <li>New New 2</li>
           <li>New New 3</li>
-        </ul>  
+        </ul>
 
         <li data-toggle="collapse" data-target="#menulevels" class="collapsed">
           <a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i> Menu Levels <span class="arrow"></span></a>
@@ -146,7 +145,7 @@
           <li>New New 1</li>
           <li>New New 2</li>
           <li>New New 3</li>
-        </ul>  
+        </ul>
         <h6>FOLDER <i class="fa pull-right fa-plus" aria-hidden="true"></i></h6>
         <li>
           <a href="#">
@@ -253,6 +252,8 @@
     </div>
   </div>
   <div class="chat-messages col-md-12">
+
+
     <p><span class="status-online"></span> Jane Smith <span class="pull-right"><i class="fa fa-times"></i></span></p>
     <p class="sent-time text-center">Yesterday 11:25pm</p>
     <div class="col-md-12">
@@ -284,17 +285,17 @@
     </div>
   </div>
    <div class="chat-input col-md-12">
-   
-     
-     
+
+
+
      <form action="{{ url('/sendmessage') }}" method="POST">
      <input name="_token" type="hidden">
       <textarea rows="1" placeholder="Type your message" class="text"></textarea>
      </form>
    </div>
   </div>
- 
- 
+
+
 </div>
 
 <div id="main-part">
@@ -308,7 +309,7 @@
      <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-repeat" aria-hidden="true"></i></a>
      </li>
      <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-th-large" aria-hidden="true"></i></a>
-     </li> 
+     </li>
 
    </ul>
    <div class="" style="display: flex;
@@ -316,7 +317,7 @@
   justify-content: center;">
      <img class="text-center visible-xs " src="assets/images/logo.png" alt="">
    </div>
-   
+
    <div class=" hidden-xs pull-left">
      <form class="navbar-form" role="search">
        <div class="input-group col-md-8">
@@ -336,9 +337,9 @@
    </a>
  </li>
  <li class="hidden-xs"><a href="#"><i class="fa hidden-xs fa-cog1 fa-cog" aria-hidden="true"></i></a>
- </li> 
+ </li>
  <li class="chat-open pull-right"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
- </li> 
+ </li>
 </ul>
 </div>
 </div>
@@ -355,18 +356,18 @@
       <img src="assets/images/d.jpg" class="img-circle pull-left" alt="">
       <p class="heading ">David Nester - Commented...</p>
       <p class="description">Meeting postponed to tomorrow</p>
-      <p class="time">A min ago</p>   
+      <p class="time">A min ago</p>
     </div>
     <div class="col-md-12 notification-messages danger">
      <p class="heading">Server load limited</p>
      <p class="description">Database server has reached its d...</p>
-     <p class="time">2 mins ago</p>   
+     <p class="time">2 mins ago</p>
    </div>
    <div class="col-md-12 notification-messages">
     <img src="assets/images/h.jpg" class="img-circle pull-left" alt="">
     <p class="heading">You haveve got 150 messa...</p>
     <p class="description">150 newly unread messages in you...</p>
-    <p class="time">An hour ago</p>   
+    <p class="time">An hour ago</p>
   </div>
 </div>
 </div>
@@ -531,7 +532,7 @@
         </div>
       </div>
 
-    </div>  
+    </div>
 
   </div>
   <div class="sparklines">
@@ -569,7 +570,7 @@
         <input type="submit" class="submit" value="Join Group">
       </span>
     </div>
-    
+
 
 
   </div>
@@ -586,7 +587,7 @@
          </h3>
 
          </div>
-      </li> 
+      </li>
       <li>
          <div>
 
@@ -613,7 +614,7 @@
       <span><img src="assets/images/d.jpg" class="img-circle" alt="">David Cooper @Revox</span>
       <h4>“Just <b>Completed</b><br> the <b>Heart walk</b> advertiing   campaign”
       </h4>
-      
+
     </div>
     </li>
   </ul>
@@ -698,7 +699,7 @@
             <div class="col-md-12  col-xs-12 col-sm-12">
              Sun <canvas class="partly-cloudy-day text-center" width="16" height="16"></canvas> <span class="pull-right">32-38 <span>C&#176;</span></span>
            </div>
-           <div class="col-md-12 col-xs-12 col-sm-12"> 
+           <div class="col-md-12 col-xs-12 col-sm-12">
             Sun <canvas class="partly-cloudy-day" width="16" height="16"></canvas> <span class="pull-right">32-38 <span>C&#176;</span></span>
           </div>
           <div class="col-md-12 col-xs-12 col-sm-12">
@@ -719,7 +720,7 @@
         <div class="col-md-6 col-xs-12 col-sm-6">
           <div class="col-md-5 col-xs-5 col-sm-5">
             <canvas class="partly-cloudy-day" width="64" height="64"></canvas>
-            <h6>WEDNESDAY</h6> 
+            <h6>WEDNESDAY</h6>
           </div>
           <div class="col-md-7 col-xs-7 col-sm-7">
             <p>34&#176;</p>
@@ -739,7 +740,7 @@
               </div>
               <div class="col-md-5 col-xs-5 col-sm-5">
                 <canvas class="wind" width="64" height="64"></canvas>
-                <h6>WEDNESDAY</h6> 
+                <h6>WEDNESDAY</h6>
               </div>
             </div>
           </div>
@@ -763,7 +764,7 @@
                 <span>16:203.26</span>
               </div>
               <div class="col-md-3 col-xs-12 col-sm-3">
-                Day Range  
+                Day Range
                 <br>
                 <span>01.12.13 </span>
               </div>
@@ -787,7 +788,7 @@
            <div class="col-md-7 col-xs-12 col-sm-7">
              <div class="col-md-12 col-xs-12 col-sm-12">
                MARKET <span class="col-md-offset-1">DOW</span>
-               
+
                <span><br><i class="fa fa-caret-up" aria-hidden="true"></i> 15,580.11</span>
              </div>
              <div class="col-md-12 col-xs-12 col-sm-12">
@@ -844,7 +845,7 @@
               <span>16:203.26</span>
             </div>
             <div class="col-md-3 col-xs-12 col-sm-3">
-              Day Range  
+              Day Range
               <br>
               <span>01.12.13 </span>
             </div>
@@ -915,12 +916,12 @@
       <div class="col-md-4 hidden-xs hidden-sm">
         <div class="col-md-12 col-sm-12">
           <img src="assets/images/10.png" class=" big lazy hover-effect-img img-responsive" alt="">
-        
+
           <div class="content">
             <span><i class="fa fa-lg fa-times pull-right" aria-hidden="true"></i><i class="fa fa-repeat pull-right" aria-hidden="true"></i></span>
             <br><p class="pull-right">#art design</p>
             <div class="clearfix"></div>
-             
+
               <div class="col-md-6">
                 <img src="assets/images/avatar.jpg" class="img-circle img-responsive"  alt=""><div class="clearfix"></div>
                 <h5>David Jester <br><span>@revox</span>
@@ -929,7 +930,7 @@
 
               <div class="col-md-6 col-sm-6">
                 <span class="pull-right">24m</span>
-                
+
                 <h6>
                 The attention to detail and the end product is stellar! I enjoyed the process
                 </h6>
@@ -937,8 +938,8 @@
                 <p class="pull-left">#amazing</p>
                 <p class="pull-left">#citymax</p>
               </div>
-            
-          </div> 
+
+          </div>
         </div>
          <div class="col-md-12 col-xs-12 col-sm-12 second">
           <div class="titles">
@@ -984,9 +985,48 @@
             </div>
           </div>
         </div>
+        <ul id="messages"></ul>
+        <form action="">
+          <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+
+
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript">
+      var socket = io.connect(':3000');
+
+      jQuery(document).ready(function($) {
+        var data = {
+                  sender_id :'1',
+                  receiver_id: '2',
+                  message :  ""
+              };
+
+        $('form').submit(function(){
+          data.message = $('#m').val();
+          socket.emit('chat message', data);
+          $('#m').val('');
+          socket.on('all_data', function(result){
+                      $('#messages').text('');
+                      $.each(result,function (key,value) {
+                          $('#messages').append($('<li>').text(value.message));
+                      });
+          });
+          return false;
+        });
+        socket.emit('data',data);
+        socket.on('all_data', function(result){
+              $('#messages').text('');
+              $.each(result,function (key,value) {
+              $('#messages').append($('<li>').text(value.message));
+              })
+        });
+      });
+
+    </script>
         <div class="col-md-12 col-xs-12">
           <img src="assets/images/10.png" class="lazy hover-effect-img big img-responsive" alt="">
-        
+
           <div class="content">
             <span><i class="fa fa-lg fa-times pull-right" aria-hidden="true"></i><i class="fa fa-repeat pull-right" aria-hidden="true"></i></span>
             <br><p class="pull-right">#art design</p>
@@ -998,7 +1038,7 @@
             </div>
             <div class="col-md-6">
               <span class="pull-right">24m</span>
-              
+
               <h6>
               The attention to detail and the end product is stellar! I enjoyed the process
               </h6>
@@ -1006,7 +1046,7 @@
               <p class="pull-left">#amazing</p>
               <p class="pull-left">#citymax</p>
             </div>
-          </div> 
+          </div>
         </div>
     </div>
   </div>
@@ -1015,42 +1055,3 @@
 
 </body>
 </html>
-<script> 
-
-  $(document).keyup(function(e) {
-    if(e.keyCode ==13){
-      sendMessage();
-    }
-    else{
-      console.log('sd');
-    }
-  });
-  function sendMessage(){
-    var text= $('textarea').val();
-    var username = '{{Auth::user()->name}}';
-    if (text.length > 1) {
-      var text= $('textarea').val();
-    var username = '{{Auth::user()->name}}';
-        $.ajax({
-            data:username,
-            dataType: 'json',
-            url: 'sendMessage',
-            type: 'POST',
-            contentType: 'application/json; charset=utf-8',
-            success: function (result) {
-                alert(result);
-            },
-            failure: function (errMsg) {
-                alert('errMsg');
-            }
-        });
-     
-    }
-    function isTyping(){
-     console.log('sdf');
-    }
-    function notTyping(){
-    
-    }
-  }; 
-</script>
