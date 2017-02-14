@@ -197,7 +197,7 @@
     <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
   </div>
   <div class="col-md-12 group-charts" style="">
-    <h6>{{Auth::user()->name}}CHARTS</h6>
+    <h6>GROUP CHATS</h6>
     <ul>
       <li>
         <a href="">
@@ -214,15 +214,15 @@
   <div class="col-md-12 favourites" style="">
     <h6>FAVOURITES</h6>
     <div class="col-md-12 active">
-      <img src="assets/images/d.jpg" class="img-circle pull-left" alt="">
+      <img src="public/uploads/58417ef9ec469.jpg" class="img-circle pull-left" alt="">
       <i class="fa fa-circle-o pull-right fa-lg" aria-hidden="true"></i>
-      <p>Jane Smith</p>
+      <p>Elnur Khalilov</p>
       <span>Hello you here?</span>
     </div>
     <div class="col-md-12">
       <img src="assets/images/c.jpg" class="img-circle pull-left" alt="">
       <i class="fa fa-circle-o pull-right fa-lg offline" aria-hidden="true"></i>
-      <p>David Nester</p>
+      <p>Samir Kerimov</p>
       <span>Busy,Do not disturb</span>
     </div>
     <h6>MORE FRIENDS</h6>
@@ -278,19 +278,14 @@
       </div>
     </div>
     <p class="sent-time text-center">Today 11:25pm</p>
-    <div class="col-md-12 ">
-    <div class="bubble pull-right sender">
-      Let me know when you free
-      <div class="senderarrow"></div>
-    </div>
-  </div>
+    <ul class="messages">
+
+    </ul>
+
    <div class="chat-input col-md-12">
 
-
-
-     <form action="{{ url('/sendmessage') }}" method="POST">
-     <input name="_token" type="hidden">
-      <textarea rows="1" placeholder="Type your message" class="text"></textarea>
+     <form action="" method="">
+      <input autocomlete=off placeholder="Type your message" id="m">
      </form>
    </div>
   </div>
@@ -985,10 +980,6 @@
             </div>
           </div>
         </div>
-        <ul id="messages"></ul>
-        <form action="">
-          <input id="m" autocomplete="off" /><button>Send</button>
-        </form>
 
 
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
@@ -997,8 +988,8 @@
 
       jQuery(document).ready(function($) {
         var data = {
-                  sender_id :'1',
-                  receiver_id: '2',
+                  sender_id :{{Auth::user()->id}},
+                  receiver_id: '7',
                   message :  ""
               };
 
@@ -1009,7 +1000,12 @@
           socket.on('all_data', function(result){
                       $('#messages').text('');
                       $.each(result,function (key,value) {
-                          $('#messages').append($('<li>').text(value.message));
+                          if (value.sender_id == 6) {
+                            $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                          }
+                          if(value.receiver_id ==6){
+                            $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                          }
                       });
           });
           return false;
@@ -1018,7 +1014,9 @@
         socket.on('all_data', function(result){
               $('#messages').text('');
               $.each(result,function (key,value) {
-              $('#messages').append($('<li>').text(value.message));
+                if (value.sender_id == 6) {
+                  $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                }
               })
         });
       });

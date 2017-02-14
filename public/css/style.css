@@ -523,13 +523,16 @@ body {
       body .main-chat .chat-messages .chat-input {
         position: absolute;
         bottom: 70px; }
-        body .main-chat .chat-messages .chat-input textarea {
+        body .main-chat .chat-messages .chat-input input {
           width: 100%;
+          border: none;
           border-radius: 2px;
           padding: 6px 11px 6px 12px;
           width: 100%; }
       body .main-chat .chat-messages .col-md-12:hover {
         background-color: #22262e; }
+      body .main-chat .chat-messages .col-md-12:last-child:hover {
+        background-color: 0px !important; }
   body #main-content {
     height: 100%;
     position: relative;
@@ -1913,5 +1916,7 @@ body {
       background-color: white;
       color: #5e5e5e;
       border: 1px solid #e5e9ec; }
+  .mail-compose .chat-input:hover {
+    background-color: none; }
 
 /*# sourceMappingURL=style.css.map */
