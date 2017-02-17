@@ -26,6 +26,7 @@ class MessagesController extends Controller
     }
   public function compose()
   {
+
   	return view('compose');
   }
 }

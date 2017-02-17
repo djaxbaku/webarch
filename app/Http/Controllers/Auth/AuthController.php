@@ -65,7 +65,7 @@ class AuthController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {   
+    {
         $fileName = 'null';
         if (Request::file('img')->isValid()) {
         $destinationPath = public_path('/uploads/');

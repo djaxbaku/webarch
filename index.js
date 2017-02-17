@@ -35,15 +35,9 @@ io.on('connection', function(socket){
             });
       });
     }else {
-      console.log('Mesaj boş ola bilməz');
+      console.log('Empty');
     }
-    socket.on(data, function(result){
 
-    connection.query("SELECT * FROM chats WHERE sender_id=" + data.sender_id,function (err,result) {
-          if (err) throw err;
-          io.emit('all_data',result);
-      });
-    });
   });
 
 });

@@ -37,7 +37,7 @@
         $("#main-part").toggleClass("right-toggle");
       $("#mySidenav").toggleClass('margin-left-toggle');
       $(".main-chat").toggleClass('z-index-toggle');
-
+      
       }
       else{
         $("#main-part").toggleClass("margin-right-toggle");
@@ -127,7 +127,7 @@
       spotColor: 'white',
       spotRadius: 2.5});
 
-      
+
 
      setInterval(function(){
         $.slider_height= $('.slider1').height();

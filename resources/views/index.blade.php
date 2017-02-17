@@ -16,7 +16,7 @@
     <script src="/vendor/js/main.js"></script>
     <link rel="stylesheet" href="/vendor/fonts/line-icons.woff">
     <link rel="stylesheet" href="/vendor/css/font-awesome.css">
-    <link rel="stylesheet" href="/vendor/css/font-lineicons.css">
+    <link rel="stylesheet" href="/vendor/css/font-.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -213,43 +213,20 @@
  </div>
   <div class="col-md-12 favourites" style="">
     <h6>FAVOURITES</h6>
-    <div class="col-md-12 active">
-      <img src="public/uploads/58417ef9ec469.jpg" class="img-circle pull-left" alt="">
+    <div class="col-md-12 active elnur">
+      <img src="assets/images/58417ef9ec469.jpg" class="img-circle pull-left" alt="">
       <i class="fa fa-circle-o pull-right fa-lg" aria-hidden="true"></i>
       <p>Elnur Khalilov</p>
       <span>Hello you here?</span>
     </div>
-    <div class="col-md-12">
-      <img src="assets/images/c.jpg" class="img-circle pull-left" alt="">
+    <div class="col-md-12 samir">
+      <img src="assets/images/58418018514ab.jpg" class="img-circle pull-left" alt="">
       <i class="fa fa-circle-o pull-right fa-lg offline" aria-hidden="true"></i>
       <p>Samir Kerimov</p>
       <span>Busy,Do not disturb</span>
     </div>
-    <h6>MORE FRIENDS</h6>
-    <div class="col-md-12">
-      <img src="assets/images/d.jpg" class="img-circle pull-left" alt="">
-      <i class="fa fa-circle-o pull-right fa-lg" aria-hidden="true"></i>
-      <p>Jane Smith</p>
-      <span>Hello you here?</span>
-    </div>
-    <div class="col-md-12">
-      <img src="assets/images/h.jpg" class="img-circle pull-left" alt="">
-      <i class="fa fa-circle-o pull-right fa-lg offline" aria-hidden="true"></i>
-      <p>David Nester</p>
-      <span>Busy,Do not disturb</span>
-    </div>
-    <div class="col-md-12">
-      <img src="assets/images/c.jpg" class="img-circle pull-left" alt="">
-      <i class="fa fa-circle-o pull-right fa-lg" aria-hidden="true"></i>
-      <p>Jane Smith</p>
-      <span>Hello, you there?</span>
-    </div>
-    <div class="col-md-12">
-      <img src="assets/images/h.jpg" class="img-circle pull-left" alt="">
-      <i class="fa fa-circle-o pull-right fa-lg offline" aria-hidden="true"></i>
-      <p>David Nester</p>
-      <span>Busy,Do not disturb</span>
-    </div>
+
+
   </div>
   <div class="chat-messages col-md-12">
 
@@ -278,19 +255,16 @@
       </div>
     </div>
     <p class="sent-time text-center">Today 11:25pm</p>
-    <ul class="messages">
+    <ul id="messages">
 
     </ul>
 
-   <div class="chat-input col-md-12">
-
-     <form action="" method="">
-      <input autocomlete=off placeholder="Type your message" id="m">
-     </form>
-   </div>
-  </div>
-
-
+    </div>
+    <div class="chat-input col-md-12">
+        <form action="" method="">
+         <input autocomlete=off placeholder="Type your message" id="m">
+        </form>
+    </div>
 </div>
 
 <div id="main-part">
@@ -380,9 +354,7 @@
 
 <div id="main-content">
   <div class="content sm-gutter">
-  @if (Session::has('success'))
-    <br><p> {{ Session::get('success') }}</p>
-  @endif
+
     <!-- FIRST LINE -->
     <div class="row">
      <div class="col-md-4 col-xs-12 col-sm-6">
@@ -987,12 +959,32 @@
       var socket = io.connect(':3000');
 
       jQuery(document).ready(function($) {
+        $('#messages').scrollTop = $("#messages").scrollHeight;
         var data = {
                   sender_id :{{Auth::user()->id}},
-                  receiver_id: '7',
+                  receiver_id: 7,
                   message :  ""
               };
 
+              $('.elnur').click(function(event) {
+
+                var data = {
+                          sender_id :{{Auth::user()->id}},
+                          receiver_id: 7,
+                          message :  ""
+                      };
+              });
+              $('.samir').click(function(event) {
+
+                var data = {
+                          sender_id :{{Auth::user()->id}},
+                          receiver_id: 7,
+                          message :  ""
+                      };
+              });
+              if ({{Auth::user()->id}}==7) {
+                data.receiver_id=6;
+              }
         $('form').submit(function(){
           data.message = $('#m').val();
           socket.emit('chat message', data);
@@ -1000,11 +992,11 @@
           socket.on('all_data', function(result){
                       $('#messages').text('');
                       $.each(result,function (key,value) {
-                          if (value.sender_id == 6) {
-                            $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                          if (value.sender_id ==6) {
+                            $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
                           }
-                          if(value.receiver_id ==6){
-                            $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                          else{
+                            $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
                           }
                       });
           });
@@ -1014,9 +1006,12 @@
         socket.on('all_data', function(result){
               $('#messages').text('');
               $.each(result,function (key,value) {
-                if (value.sender_id == 6) {
-                  $('.messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
-                }
+                  if (value.sender_id == 6) {
+                    $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                  }
+                  else{
+                    $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
+                  }
               })
         });
       });
