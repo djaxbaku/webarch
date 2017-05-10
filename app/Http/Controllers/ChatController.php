@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class ChatController extends Controller
 {
-    //
+     public function index()
+    {
+    	return view('index');
+    }
 }

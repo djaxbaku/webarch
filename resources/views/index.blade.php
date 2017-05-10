@@ -289,7 +289,7 @@
 
    <div class=" hidden-xs pull-left">
      <form class="navbar-form" role="search">
-       <div class="input-group col-md-8">
+       <div class="input-group col-md-12 col-sm-12" >
         <div class="input-group-btn">
          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
        </div>
@@ -952,71 +952,6 @@
             </div>
           </div>
         </div>
-
-
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <script type="text/javascript">
-      var socket = io.connect(':3000');
-
-      jQuery(document).ready(function($) {
-        $('#messages').scrollTop = $("#messages").scrollHeight;
-        var data = {
-                  sender_id :{{Auth::user()->id}},
-                  receiver_id: 7,
-                  message :  ""
-              };
-
-              $('.elnur').click(function(event) {
-
-                var data = {
-                          sender_id :{{Auth::user()->id}},
-                          receiver_id: 7,
-                          message :  ""
-                      };
-              });
-              $('.samir').click(function(event) {
-
-                var data = {
-                          sender_id :{{Auth::user()->id}},
-                          receiver_id: 7,
-                          message :  ""
-                      };
-              });
-              if ({{Auth::user()->id}}==7) {
-                data.receiver_id=6;
-              }
-        $('form').submit(function(){
-          data.message = $('#m').val();
-          socket.emit('chat message', data);
-          $('#m').val('');
-          socket.on('all_data', function(result){
-                      $('#messages').text('');
-                      $.each(result,function (key,value) {
-                          if (value.sender_id ==6) {
-                            $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
-                          }
-                          else{
-                            $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
-                          }
-                      });
-          });
-          return false;
-        });
-        socket.emit('data',data);
-        socket.on('all_data', function(result){
-              $('#messages').text('');
-              $.each(result,function (key,value) {
-                  if (value.sender_id == 6) {
-                    $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
-                  }
-                  else{
-                    $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
-                  }
-              })
-        });
-      });
-
-    </script>
         <div class="col-md-12 col-xs-12">
           <img src="assets/images/10.png" class="lazy hover-effect-img big img-responsive" alt="">
 
@@ -1048,3 +983,51 @@
 
 </body>
 </html>
+{{-- <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript">
+      var socket = io.connect(':3000');
+
+      jQuery(document).ready(function($) {
+        $('#messages').scrollTop = $("#messages").scrollHeight;
+        var data = {
+                  sender_id :{{Auth::user()->id}},
+                  receiver_id: 7,
+                  message :  ""
+              };
+
+              
+              if ({{Auth::user()->id}}==7) {
+                data.receiver_id=6;
+              }
+        $('form').submit(function(){
+          data.message = $('#m').val();
+          socket.emit('chat message', data);
+          $('#m').val('');
+          socket.on('all_data', function(result){
+                      $('#messages').text('');
+                      $.each(result,function (key,value) {
+                          if (value.sender_id ==6) {
+                            $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+                          }
+                          else{
+                            $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
+                          }
+                      });
+          });
+          return false;
+        });
+        // socket.emit('data',data);
+        // socket.on('all_data', function(result){
+        //       $('#messages').text('');
+        //       $.each(result,function (key,value) {
+        //           if (value.sender_id == 6) {
+        //             $('#messages').append('<li>' +'<div class="col-md-12"><div class="bubble pull-right sender">' +value.message +'</div></div></li>');
+        //           }
+        //           else{
+        //             $('#messages').append('<li>' +'<div class="col-md-12"><img src="assets/images/58417ef9ec469.jpg" class="img-responsive img-circle pull-left" alt=""><div class="bubble pull-left">' +value.message +'</div></div></li>');
+        //           }
+        //       })
+        // });
+      });
+
+    </script> --}}

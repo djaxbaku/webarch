@@ -13,9 +13,7 @@
 
 
 
-Route::get('/', function () {
-    return view('index');
-})->middleware('auth');
+Route::get('/', 'ChatController@index')->middleware('auth');
 
 Route::get('/email', 'MessagesController@email');
 

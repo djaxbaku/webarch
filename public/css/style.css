@@ -790,10 +790,8 @@ body {
             margin-top: 80px !important; }
       body #main-content .third-line .line .col-md-3:nth-child(2) {
         padding: 0px; }
-        body #main-content .third-line .line .col-md-3:nth-child(2) div {
-          background-image: url("../images/11.png"); }
-          body #main-content .third-line .line .col-md-3:nth-child(2) div h4 {
-            margin-top: 120px; }
+        body #main-content .third-line .line .col-md-3:nth-child(2) div h4 {
+          margin-top: 120px; }
       body #main-content .third-line .col-md-3 {
         padding-left: 10px;
         padding-right: 10px;
@@ -945,6 +943,7 @@ body {
       body .fourth-line .col-md-6:first-child .total-income {
         padding-left: 15px !important;
         padding-top: 20px;
+        padding-bottom: 20px !important;
         background-color: white;
         margin-top: 10px; }
         body .fourth-line .col-md-6:first-child .total-income .col-md-4 {
@@ -1538,6 +1537,7 @@ body {
               margin-right: 5px; }
   body #main-part {
     height: 100%;
+    margin-bottom: -20px;
     transition: all 0.2s ease;
     margin-right: 0px;
     position: relative !important; }
